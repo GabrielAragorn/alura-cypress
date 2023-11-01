@@ -3,8 +3,8 @@ describe('Sign Up Page', () => {
     cy.visit('http://localhost:4200/#/home')
     cy.contains('a', 'Register now').click()
     cy.get('[data-test="email"]').type('jimhalpert@email.com')
-    cy.get('[data-test="fullName"]').type('Jim Halpert')
-    cy.get('[data-test="registerUserName"]').type('jimh')
+    cy.get('[data-test="fullName"]').type('Jim Halpert') //the get is grabing an element from the page that is tagged 
+    cy.get('[data-test="registerUserName"]').type('jimh') //type write in the field
     cy.get('[data-test="registerPassword"]').type('jimbo321')
     cy.contains('button', 'Register').click()
 
