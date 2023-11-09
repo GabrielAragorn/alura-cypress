@@ -8,9 +8,12 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
-//
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add('login', (username, password) => {
+    cy.get('[data-test="loginUserName"]').type('username')
+    cy.get('[data-test="loginPassword"]').type('password')
+    cy.contains('button', 'login').click()
+})
 //
 //
 // -- This is a child command --
